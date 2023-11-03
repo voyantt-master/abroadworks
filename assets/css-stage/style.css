@@ -630,8 +630,12 @@ border-radius: 15px;
    display:none !important;
 }
 
-#carousel-client .active.after-active, #carousel-client .owl-item.active {width:408px !important; opacity:.6 !important;}
-#carousel-client .active.center{width:503px !important; opacity:1 !important; left: -26px;}
+#carousel-client .active.after-active, #carousel-client .owl-item.active { opacity:.6 !important;}
+#carousel-client .active.center{ opacity:1 !important; left: -26px;}
+@media only screen and (min-width: 992px){
+  #carousel-client .active.after-active, #carousel-client .owl-item.active {width:408px !important;}
+  #carousel-client .active.center{width:503px !important;}
+}
 #carousel-client .after-active{opacity:0 !important;}
 #carousel-client .owl-item.cloned{}
 #carousel-client .owl-item.active{    margin-left: -127px;}

@@ -63,12 +63,8 @@ get_header('custom');
 							  </div>
 				
 						<?php endwhile; ?>
-						
-					
-					
 				</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -76,16 +72,12 @@ get_header('custom');
 <section class="trusted-by spacing-section">
 	<div class="container">
 		<h3 class="font-dark font-Montserrat text-center fw-medium mob-font-md mb-2"><?php the_field('second_heading'); ?></h3>
-		<div class="owl-carousel owl-theme brands my-4 px-1">
+		<div class="owl-carousel owl-theme brands my-4">
 			<?php while( have_rows('all_clients') ): the_row(); ?>
 			 <div class="item m-auto">
 				<img src="<?php the_sub_field('clients_logo'); ?>" class="img-fluid m-auto" alt="<?php the_sub_field('client_logo_alt'); ?>">
-			
-			 </div>
-				
+			 </div>	
 			<?php endwhile; ?>
-		
-		
 		</div>
 
 	</div>
@@ -110,52 +102,33 @@ get_header('custom');
 				</div>
 				
 			<?php endwhile; ?>
-		
-		
-		
 		</div>
 	</div>
 </section>
 <section class="reasons-section bg-dark text-white spacing-section">
-
    <div class="container ">
-	
-      <div class="row justify-content-md-center">
-         <div class="col-lg-9 col-12 text-center">
-            <h2 class="font-Montserrat fw-medium ls-wide"><?php the_field('section_fourth_heading'); ?></h2>
-            
-         </div>
-      </div>
-     
+      <h2 class="font-Montserrat fw-medium ls-wide text-center"><?php the_field('section_fourth_heading'); ?></h2>
       <div class="row reasons px-4 px-sm-0 mt-md-5 mt-3 owl-carousel owl-theme d-flex position-relative ">
          <?php while( have_rows('all_reasons') ): the_row(); ?>
-			            <div class="col-xl-3 col-lg-12 col-md-12 col-11 ms-2 ms-md-0 mb-md-5">
+			<div class="col-xl-3 col-lg-12 col-md-12 col-11 ms-2 ms-md-0 mb-md-5">
                <div class="reasons-box boder15 text-left p-4 hvr-grow-shadow wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s" data-wow-duration="2s">
 					<div class="reasons-img">
-						<img src="<?php the_sub_field('reasons_icon'); ?>" loading="lazy" class=" mb-3 img-fluid" alt="<?php the_sub_field('reasons_icon_alt'); ?>">
-							
+						<img src="<?php the_sub_field('reasons_icon'); ?>" loading="lazy" class=" mb-3 img-fluid" alt="<?php the_sub_field('reasons_icon_alt'); ?>">	
 					</div>
                   <p class="fw-medium font-md ls-wide font-Montserrat mt-4"><?php the_sub_field('reasons_tittle'); ?></p>
                   <p class="font-sm fw-light"><?php the_sub_field('reasons_details'); ?></p>
                </div>
-            </div>
-				
-			<?php endwhile; ?>
- 
-     
-           
+            </div>	
+			<?php endwhile; ?>           
        </div>
-        <div class="col-12 text-center "> <a href="<?php the_field('join_now_link'); ?>" class="btn button-primary button-talent font-Montserrat py-2 px-4 fs-5 mt-4 bg-white font-dark fw-normal hvr-float fw-medium"><?php the_field('join_now_button_label'); ?></a></div>
-			
-    
-
-
-      
+        <div class="text-center">
+        	<a href="<?php the_field('join_now_link'); ?>" class="btn button-primary button-talent font-Montserrat py-2 px-4 fs-5 mt-4 bg-white font-dark fw-normal hvr-float fw-medium"><?php the_field('join_now_button_label'); ?></a>
+        </div>
    </div>
 </section>
 
 <section class="ourservice-section spacing-section">
-	<div class="container ">
+	<div class="container">
 		<div class="row justify-content-between">
          <div class="col-lg-6 col-12 pe-5 d-none d-sm-block mt-5">
 			
@@ -164,83 +137,67 @@ get_header('custom');
                <div class="fw-light"><?php the_field('section_fifth_content'); ?></div>
             </div>
          </div>
-            <div class="col-lg-6 col-12">
-               <div class="row">
-			    <h2 class="font-Montserrat mt-0 fw-medium d-block d-sm-none text-center my-2 pb-2"><?php the_field('section_fifth_heading'); ?></h2>
-			    <?php $counter = 0; ?>
-				<?php while( have_rows('all_services') ): the_row(); ?>
-					      <div class="box boder15 fadeInLef p-4 col-11 hvr-forward wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay="0s" style="--n: <?php echo $counter; ?>;" data-wow-delay="300ms">
-                        <div class="d-flex justify-content-between align-items-center">
-						<h4 class="fw-medium font-Montserrat font-md mt-0"><?php the_sub_field('service_name'); ?></h4> 
-						<!--<span><a href="<?php the_sub_field('service_link'); ?>"><svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 8H34.5M34.5 8L27.5 1M34.5 8L27.5 15" stroke="#888888"/></a>
-</svg>
-</span>--></div>
-                        <ul class="list-unstyled fw-light lh-1">
-							<?php while( have_rows('service_points') ): the_row(); ?>
-							<li class="position-relative ps-3"><p class="mb-1 fw-light"><?php the_sub_field('points_of_services'); ?></p></li>
-                           <?php endwhile; ?>
-                        </ul>
-                     </div>
-				<?php $counter++; ?>
-				<?php endwhile; ?>
-                  
-               
-
-                 
-               
-                  
-                
-                 
-             
-                
-
-               </div>
-               
+        <div class="col-lg-6 col-12">
+		    <h2 class="font-Montserrat mt-0 fw-medium d-block d-sm-none text-center my-2 pb-2"><?php the_field('section_fifth_heading'); ?></h2>
+		    <?php $counter = 0; ?>
+			<?php while( have_rows('all_services') ): the_row(); ?>
+			<div class="box boder15 fadeInLef p-4 col-11 hvr-forward wow animate__animated animate__fadeIn" data-wow-duration="1s" data-wow-delay="0s" style="--n: <?php echo $counter; ?>;" data-wow-delay="300ms">
+                <div class="d-flex justify-content-between align-items-center">
+				<h4 class="fw-medium font-Montserrat font-md mt-0"><?php the_sub_field('service_name'); ?></h4> 
+				<!--<span><a href="<?php the_sub_field('service_link'); ?>"><svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 8H34.5M34.5 8L27.5 1M34.5 8L27.5 15" stroke="#888888"/></a>
+				</svg>
+				</span>-->
+				</div>
+                <ul class="list-unstyled fw-light lh-1">
+					<?php while( have_rows('service_points') ): the_row(); ?>
+					<li class="position-relative ps-3"><p class="mb-1 fw-light"><?php the_sub_field('points_of_services'); ?></p></li>
+                   <?php endwhile; ?>
+                </ul>
             </div>
+			<?php $counter++; ?>
+			<?php endwhile; ?>               
+        </div>
 	</div>
   </div>
 </section>
 
 <section class="highlight-section text-white" id="highlights-section">
 <div class="bg-w">
-	<div class="container spacing-section ">
-      <div class="row justify-content-md-center">
-         <div class="col-lg-9 col-12  text-center mb-0 mb-md-5">
-            <h2 class="font-Montserrat mt-md-5 mt-4 fw-medium"><?php the_field('section_sixth_heading'); ?></h2>
-         </div>
-      </div>
-      <div class="row mt-3 highlights">
-		<div class="col text-center highlights-block mb-4 mb-md-0">
-		  <h3 class="font-lg fw-bold counter" data-target="<?php the_field('highlight_value_one'); ?>" data-unit="%">0</h3>
-		  <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_one'); ?></h4>
+	<div class="spacing-section">
+		<div class="container">
+			<h2 class="font-Montserrat mt-md-5 mt-0 fw-medium text-center"><?php the_field('section_sixth_heading'); ?></h2>
+		    <div class="row mt-3 highlights">
+				<div class="col text-center highlights-block mb-4 mb-md-0">
+				  <h3 class="font-lg fw-bold counter" data-target="<?php the_field('highlight_value_one'); ?>" data-unit="%">0</h3>
+				  <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_one'); ?></h4>
+				</div>
+				<div class="col text-center highlights-block mb-4 mb-md-0">
+				  <h3 class="font-lg fw-bold counter" data-target="<?php the_field('highlight_value_two'); ?>" data-unit="+">0</h3>
+				  <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_two'); ?></h4>
+				</div>
+		         <div class="col text-center d-none d-md-block  highlights-block">
+				 <h3 class="font-lg fw-bold counter" data-target="<?php the_field('highlight_value_third'); ?>" data-unit="+">0</h3>
+				 <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_third'); ?></h4>
+				 </div>
+		         <div class="col text-center  highlights-block mb-md-0">
+				 <h3 class="font-lg fw-bold counter" data-target="<?php echo (int) $final_value; ?>" data-unit="K+"></h3>
+			
+				 <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_fourth'); ?></h4>
+				 </div>
+		         <div class="col text-center  highlights-block mb-md-0">
+				  <h3 class="font-lg fw-bold counter special-case" data-target="<?php the_field('highlight_value_fifth'); ?>" data-unit="&lt;">0</h3>
+				  <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_fifth'); ?></h4>
+				</div>
+		   </div>	
 		</div>
-		<div class="col text-center highlights-block mb-4 mb-md-0">
-		  <h3 class="font-lg fw-bold counter" data-target="<?php the_field('highlight_value_two'); ?>" data-unit="+">0</h3>
-		  <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_two'); ?></h4>
-		</div>
-         <div class="col text-center d-none d-md-block  highlights-block">
-		 <h3 class="font-lg fw-bold counter" data-target="<?php the_field('highlight_value_third'); ?>" data-unit="+">0</h3>
-		 <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_third'); ?></h4>
-		 </div>
-         <div class="col text-center  highlights-block mb-4 mb-md-0">
-		 <h3 class="font-lg fw-bold counter" data-target="<?php echo (int) $final_value; ?>" data-unit="K+"></h3>
-	
-		 <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_fourth'); ?></h4>
-		 </div>
-         <div class="col text-center  highlights-block mb-4 mb-md-0">
-		  <h3 class="font-lg fw-bold counter special-case" data-target="<?php the_field('highlight_value_fifth'); ?>" data-unit="&lt;">0</h3>
-		  <h4 class="font-Montserrat fw-medium font-md fade-in"><?php the_field('highlight_tittle_fifth'); ?></h4>
-		</div>
-     
-   </div>
    </div>
 </section>
 <section class="client-say text-white d-flex align-items-center">
 	
             <div class="client-box d-flex align-items-center ">
             <div class="d-flex justify-content-between w-100 mob-flex-column tab-flex-column">
-				<div class="col-lg-5 col-12 px-4">
+				<div class="col-lg-5 col-12 px-md-4 px-0">
                   <div class="content-box">
 					<h2 class="fw-medium font-Montserrat">What Our<br> Clients Say</h2>
                     <div class="fw-light lh-base font-md "><?php the_field('section_seventh_content'); ?></div>
@@ -263,15 +220,8 @@ get_header('custom');
 							</div>
 						</div>
 						<?php endwhile; ?>
-					
-						
-						
-					
-					
-					
 						<!-- Repeat -->
-						</div>
-              
+					</div>
 				</div>
              </div>
       </div>

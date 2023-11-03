@@ -243,7 +243,13 @@
 
 
 @media only screen and (max-width: 768px){
-	#carousel-client .client-slidebox{margin:0;}
+	.fs-5 {
+		font-size: 1rem!important;
+	}
+	#carousel-client .client-slidebox{box-shadow: 3px 3px 24px -11px rgba(0,0,0,0.74); padding:15px; margin:0;}
+	.client-name::after{background-size: contain;
+    width: 115px;
+    height: 115px;}
 	.reasons .owl-prev{
 	background: url(../images-stage/whitearrow-left.png) no-repeat right !important;
 	width:25px;
@@ -303,6 +309,8 @@
 	.client-box {
     width: 100%;
     margin-left: 0;
+    position: inherit;
+    min-height:inherit;
 }
 		.content-box h2 br{
 			display:none;
@@ -313,12 +321,12 @@
 		    flex-wrap: nowrap;
 	}
 	.abroadworks-process.scrollable{margin-left:1.2rem;}
-	.reasons-section.spacing-section{padding: 1rem 0;}
-	.ourservice-section.spacing-section{    padding: 1rem 0;}
+	.reasons-section.spacing-section{padding: 2rem 0;}
+	.ourservice-section.spacing-section{ padding:2rem 0;}
 	#carousel-client .owl-dots{
 		padding-top: unset;
-    margin-right: unset;
-    text-align: center;
+    	margin-right: unset;
+    	text-align: center;
 	}
 	#carousel-client  .owl-dots button.owl-dot.active{
 		border: 1px solid var(--bs-white) !important;
@@ -344,10 +352,23 @@
 		.font-44{font-size:20px;}
 		.banner-section h4{font-size:1rem;}
 		.banner-section h1{font-size:2.188rem;}
-
+	.highlight-section .bg-w{background-position: bottom right -50px; background-size: 110% auto;}
+	.spacing-section{ padding:2rem 0; }
+	.client-say {
+		height: auto;
+		padding: 2rem 15px 2rem 15px;
+	}
+	#carousel-client .active.center{left:0;}
+	#carousel-client .owl-item.active{margin-left:0; padding:15px;}
+	.reasons .owl-nav{top:40%; left:0;}
+	.reasons .owl-nav .owl-next, .reasons .owl-nav .owl-prev{    width: 20px;
+    height: 48px;
+    background-size: contain !important;}
+    .reasons-section .reasons{ margin:0; }
 }
 @media only screen and (max-width: 576px){
-	.client-box .content-box p{    line-height: 17px;
+	.banner-section h1{font-size:2rem;}
+	.client-box .content-box p{ line-height: 17px;
     font-size: 14px;}
 	.box-hold-tab{width:100%;}
 	.blue-box {
@@ -365,9 +386,7 @@
 	.left-menubar {
     width: 52px;
 	}
-	.client-say {
-		height: auto;
-	}
+
 	#business .form-control, #applicant .form-control {	
     height: 47px;
 	}
@@ -379,9 +398,9 @@
 		flex-direction: column!important;
 	}
 		h2{font-size:20px;}
-	.client-say {
+	/*.client-say {
 		height: 90vh;
-	}
+	}*/
 	#carousel-client .owl-stage-outer {
     height: 364px;
 	}
@@ -435,10 +454,13 @@
 		clip-path: polygon(100% 0%,100% 100%,0 118%,0% 8%);
 	}
 	.trusted-by.spacing-section {
-		padding: 1rem 0;
+		padding: 1rem 0 0;
 	}
+	.ourservice-section .box{ margin-bottom:20px; }
+	.ourservice-section .box:last-child{ margin-bottom:0; }
 	.ourservice-section .box, .ourservice-section .box:nth-child(n+2), .ourservice-section .box:nth-child(n+3),.ourservice-section .box:nth-child(n+4){
-		margin-left:1rem;
+		width:100%;
+		margin-left:0;
 	}
 	.client-box {
 		background-color:transparent;
@@ -459,9 +481,10 @@
 		margin-left: 6px;
 	}
 	.client-say::after {
-
-		margin-top: 239px;
-		height: 363px;
+		left:0;
+		margin-top: 190px;
+		height: 280px;
+		transform: skewY(30deg);
 	}
 	.client-slidebox {
 		background: linear-gradient(180deg,rgba(19,135,249) 0%,#0E5FAD 100%);
@@ -479,7 +502,7 @@
 
      background-size: 311px 177px;
      background-position: 66px 149px;
-	 min-height: 330px;
+	 min-height: inherit;
 	}
 	.highlight-section.spacing-section {
 		padding: 1rem 0;
@@ -493,14 +516,14 @@
 	/* new add */
 	.about-company {clip-path: polygon(0% 0%,100% 3%,100% 100%,0% 100%);}
 	.font-44{font-size:11px;}
-	
+	.abroadworks-process.scrollable{ margin-left:0; }
 
 }
 @media only screen and (max-width: 414px){
-	#carousel-client .active.center {
+	/*#carousel-client .active.center {
     width: 346px !important;
     margin: 0 2rem;
-	}
+	}*/
 	.highlight-section {
     background-position: 100px 149px;
 	}
@@ -537,9 +560,9 @@
 }
 }
 @media only screen and (max-width: 360px){
-.client-say {
+/*.client-say {
     height: 100vh;
-}
+}*/
 	#carousel-client .owl-item.big-slide {
   width: 314px !important;
     height: auto;
