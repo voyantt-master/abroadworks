@@ -1,0 +1,54 @@
+
+:root{
+   --team-bg: #212529;
+   --procespage-bg: #F8F8F8;
+}
+.padding-60{padding:60px;}
+.font-xl-lg{font-size:5.625rem;/*90px*/		}
+.text-dark{color: var(--dark);}
+
+.text-box-right{margin-left: auto;width:630px;}  
+.inner-banner-text-bg{background: linear-gradient(91deg, #4DBEAC 0%, #3657A8 131.3%);padding: 12px 9px 12px 35px;}
+.about-section{position: relative;  }
+.w-shape {position: absolute; right: 0px; bottom:-80px;background: url(../images-stage/bg-aw-logo.png) no-repeat bottom right;
+        height:427px;width: 1143px;z-index: -9;    opacity: 0.5;}
+.about-banner {clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);}
+.about-banner img {background-size: cover;width: 100%;}
+
+.about-company {clip-path: polygon(0% 0%, 100% 8%, 100% 100%, 0% 100%);background-color: #1566ce;}
+.aboutcompany-box {min-height: 100%;background:linear-gradient(180deg, rgba(19, 135, 249, 0.75) 0%, #0E5FAD 100%);
+box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.25);}
+.aboutcompany:hover {background: linear-gradient(0deg,rgba(19,135,249,0.75) 0%,#0E5FAD 100%);}
+.aboutcompany-img{height:100px;}
+
+body.page-template-new-our-team {background:var(--team-bg);}
+
+
+.bottom-use-25 {bottom: -25%!important;}
+
+
+body.page-template-new-our-team {background: #212529;}
+body.page-template-new-our-process{background: var(--procespage-bg);}
+
+.talent-section{background-color: var(--process-section);}
+.blue-box {width:80px;height: 80px;background-color: var(--process-section);}
+.black-box {width: 80px;height: 80px;background-color: var(--dark);}
+.equal-space{
+	margin:0 2.5rem;
+}
+.blue-text-number{color: var(--process-section);}
+.bg-black-service{background-color:  #30313C;;}
+
+/* .box-list {list-style: none; padding: 0;margin: 0;display: flex;flex-wrap: wrap;gap: 16px;}
+.box-list-item {
+    min-width: calc(25% - 75px);
+    height:75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.blue{background-color: var(--process-section);}
+.product-item:nth-child(4n+1) {
+    background-color: red;
+} */
